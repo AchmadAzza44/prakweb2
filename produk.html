@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Kami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="navbar-logo">
+                Kompi<span class="red-text">Garage</span>
+                <span class="separator">x</span>
+                <img src="img/logo-saber.png" alt="Saber Logo" class="logo-img">
+            </a>
+            
+            <div class="navbar-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="produk.html">Produk</a>
+                <a href="contact.html">Hubungi</a>
+                <a href="testimoni.html">Testimoni</a>
+            </div>
+    
+            <div class="navbar-extra">
+                <a href="#" id="search"><i class="bi bi-search"></i></a>
+                <a href="#" id="shop"><i class="bi bi-bag"></i></a>
+                <a href="#" id="hamburger-menu"><i class="bi bi-list"></i></a>
+            </div>
+        </nav>
+        <!-- hamburhger awal -->
+    <script>
+        document.querySelector('#hamburger-menu').onclick = () => {
+        document.querySelector('#hamburger-menu').classList.toggle('active');
+        document.querySelector('.navbar-nav').classList.toggle('active');
+    };
+    
+    // Menghilangkan navbar saat klik di luar
+    const hamburgerMenu = document.querySelector('#hamburger-menu');
+    const navbarNav = document.querySelector('.navbar-nav');
+    
+    document.addEventListener('click', function (e) {
+        if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+            navbarNav.classList.remove('active');
+        }
+    });
+    
+    </script>
+    <!-- hamburger akhhir -->
+
+    <!-- section menu -->
+    <div class="menu-container">
+        <section id="menu" class="menu">
+          <h2><span>Produk </span>Kami</h2>
+          <p>Produk Kami telah teruji selama 25 tahun untuk menerangi perjalanan para #LaskarSinar.Berikut merupakan produk andalan dari kami!</p>
+          
+          <div class="row">
+            <!-- Produk 1 -->
+            <div class="menu-card">
+              <img src="img/menu/produk1.jpg" alt="Saber SR1 Nano" class="menu-card-img">
+              <h3 class="menu-card-title">- Saber SR1 Nano -</h3>
+              <p class="menu-card-price">IDR 1.600.000</p>
+            </div>
+            
+            <!-- Produk 2 -->
+            <div class="menu-card">
+              <img src="img/menu/produk2.jpg" alt="Saber SR1 Aero" class="menu-card-img">
+              <h3 class="menu-card-title">- Saber SR1 Aero -</h3>
+              <p class="menu-card-price">IDR 1.700.000</p>
+            </div>
+            
+            <!-- Produk 3 -->
+            <div class="menu-card">
+              <img src="img/menu/produk3.jpg" alt="Saber SR800 Evo" class="menu-card-img">
+              <h3 class="menu-card-title">- Saber SR800 Evo -</h3>
+              <p class="menu-card-price">IDR 2.000.000</p>
+            </div>
+            
+            <!-- Produk 4 -->
+            <div class="menu-card">
+              <img src="img/menu/produk4.jpg" alt="Saber SR800.3" class="menu-card-img">
+              <h3 class="menu-card-title">- Saber SR800.3-</h3>
+              <p class="menu-card-price">IDR 2.150.000</p>
+            </div>
+            
+            <!-- Produk 5 -->
+            <div class="menu-card">
+              <img src="img/menu/produk6.jpg" alt="Saber SR900 Evo" class="menu-card-img">
+              <h3 class="menu-card-title">- Saber SR900 Evo -</h3>
+              <p class="menu-card-price">IDR 2.300.000</p>
+            </div>
+            
+            <!-- Produk 6 -->
+            <div class="menu-card">
+              <img src="img/menu/produk7.jpg" alt=" Saber SR900 R" class="menu-card-img">
+              <h3 class="menu-card-title">- Saber SR900 R-</h3>
+              <p class="menu-card-price">IDR 2.600.000</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    
+</body>
+</html>

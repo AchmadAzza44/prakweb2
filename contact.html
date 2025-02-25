@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+        <body>
+            <nav class="navbar">
+                <a href="#" class="navbar-logo">
+                    Kompi<span class="red-text">Garage</span>
+                    <span class="separator">x</span>
+                    <img src="img/logo-saber.png" alt="Saber Logo" class="logo-img">
+                </a>
+                
+                <div class="navbar-nav">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Tentang Kami</a>
+                    <a href="produk.html">Produk</a>
+                    <a href="contact.html">Hubungi</a>
+                    <a href="testimoni.html">Testimoni</a>
+                </div>
+        
+                <div class="navbar-extra">
+                    <a href="#" id="search"><i class="bi bi-search"></i></a>
+                    <a href="#" id="shop"><i class="bi bi-bag"></i></a>
+                    <a href="#" id="hamburger-menu"><i class="bi bi-list"></i></a>
+                </div>
+            </nav>
+            <!-- hamburhger awal -->
+        <script>
+            document.querySelector('#hamburger-menu').onclick = () => {
+            document.querySelector('#hamburger-menu').classList.toggle('active');
+            document.querySelector('.navbar-nav').classList.toggle('active');
+        };
+        
+        // Menghilangkan navbar saat klik di luar
+        const hamburgerMenu = document.querySelector('#hamburger-menu');
+        const navbarNav = document.querySelector('.navbar-nav');
+        
+        document.addEventListener('click', function (e) {
+            if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+                navbarNav.classList.remove('active');
+            }
+        });
+        
+        </script>
+        <!-- hamburger akhhir -->
+         <section id="contact" class="contact">
+         <h2><span>Hubungi </span>Kami</h2>
+         <p>Kami sangat mengharapkan atensi dan konsultasi dari #pejuangsinar di Bengkulu,Kunjungi Showroom Kami dan hubungi kami via Social Media yang tertera dibawah!</p>
+         <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.9907890357363!2d102.30465957473363!3d-3.812069496161768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e36b08280f44289%3A0x4b537607becf032c!2sJl.%20Zainul%20Arifin%2C%20Kec.%20Singaran%20Pati%2C%20Kota%20Bengkulu%2C%20Bengkulu!5e0!3m2!1sid!2sid!4v1740403939346!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+         </div>
+
+         <div class="social-icons">
+            <a href="https://www.facebook.com/YOONGMOTORIndonesia/" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/achmadazzaa" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.tiktok.com/@kjngrbrn?_t=ZS-8u0W5j0wAw3&_r=1"target="_blank"><i class="bi bi-tiktok"></i>></a>
+        </div>
+        </section>
+</body>
+</html>

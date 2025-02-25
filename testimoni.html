@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">
+            Kompi<span class="red-text">Garage</span>
+            <span class="separator">x</span>
+            <img src="img/logo-saber.png" alt="Saber Logo" class="logo-img">
+        </a>
+        
+        <div class="navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="produk.html">Produk</a>
+            <a href="contact.html">Hubungi</a>
+            <a href="testimoni.html">Testimoni</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search"><i class="bi bi-search"></i></a>
+            <a href="#" id="shop"><i class="bi bi-bag"></i></a>
+            <a href="#" id="hamburger-menu"><i class="bi bi-list"></i></a>
+        </div>
+    </nav>
+
+    <!-- Hamburger Menu Script -->
+    <script>
+        document.querySelector('#hamburger-menu').onclick = () => {
+            document.querySelector('#hamburger-menu').classList.toggle('active');
+            document.querySelector('.navbar-nav').classList.toggle('active');
+        };
+
+        // Menghilangkan navbar saat klik di luar
+        const hamburgerMenu = document.querySelector('#hamburger-menu');
+        const navbarNav = document.querySelector('.navbar-nav');
+
+        document.addEventListener('click', function (e) {
+            if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+                navbarNav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="testimoni">
+        <h2><span>Testimoni</span> Pelanggan</h2>
+        <p>Kami sangat bangga dengan pelanggan kami. Berikut adalah beberapa testimoni dari mereka yang telah menggunakan produk dan layanan kami.</p>
+        <div class="row">
+            <div class="testimoni-card">
+                <p>"Saya sangat puas dengan produk dari KompiGarage.Kami Juga puas dengan produk Saber Kualitasnya luar biasa!"</p>
+                <span class="user">- Budi Santoso</span>
+            </div>
+            <div class="testimoni-card">
+                <p>"Pelayanan sangat ramah dan cepat. Terima kasih atas pengalaman belanja yang menyenangkan!"</p>
+                <span class="user">-Sandi Wiranto</span>
+            </div>
+            <div class="testimoni-card">
+                <p>"Modifikasi yang dilakukan sangat detail dan presisi. Saya sangat merekomendasikan!"</p>
+                <span class="user">- Andi Pratama</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
