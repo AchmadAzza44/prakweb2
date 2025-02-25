@@ -35,6 +35,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000; /* Menjaga navbar tetap di atas */
+  height: 80px; /* Set a fixed height for the navbar */
 }
 .navbar-logo {
   display: flex;
@@ -113,7 +114,9 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Subtract navbar height from 100vh */
+  margin-top: -80px; /* Pull it back up */
+  padding-top: 80px; /* Add padding to make space for the navbar */
   display: flex;
   align-items: center;
   background-image: url('./img/header2bg.jpeg');
